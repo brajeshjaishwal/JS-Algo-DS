@@ -1,0 +1,19 @@
+var arr = [2, 333, 111, 1000, 1, 2, 555, 1, 55]
+
+let max = -1, secondMax = -1, thirdMax = -1
+
+for (let num of arr){
+    if(num > max) {
+        secondMax = max
+        max = num
+    }
+    else if(num > secondMax) {
+        thirdMax = secondMax
+        secondMax = num
+    }
+    else if(num > thirdMax) {
+        thirdMax = num
+    }
+
+    console.log(`num: ${num} - max: ${max} - second max: ${secondMax} - third max: ${thirdMax}`)
+}
